@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="LogicalCalculator">
+    <output-path>$PROJECT_DIR$/out/artifacts/LogicalCalculator</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.dkmasteer.logicalcalculator.LCRunner" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="LogicalCalculator.jar">
+        <element id="module-output" name="LogicalCalculator" />
+      </element>
+    </root>
+  </artifact>
+</component>

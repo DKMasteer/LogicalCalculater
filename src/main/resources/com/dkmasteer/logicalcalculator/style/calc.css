@@ -1,0 +1,200 @@
+/* КНОПКИ */
+.button {
+    -fx-background-color: #F5F5F5;
+    -fx-text-fill: #333333;
+    -fx-border-color: #D0D0D0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6px 16px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.1s ease;
+}
+
+.button:hover {
+    -fx-background-color: #E8E8E8;
+    -fx-border-color: #B8B8B8;
+}
+
+.button:pressed {
+    -fx-background-color: #E0E0E0;
+    -fx-border-color: #A0A0A0;
+    -fx-translate-x: 0px;
+    -fx-translate-y: 0px;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+.button:focused {
+    -fx-border-color: #A0A0A0;
+    -fx-border-width: 1px;
+}
+
+/* Primary/Accent button */
+.button.primary {
+    -fx-background-color: #6B6B6B;
+    -fx-text-fill: white;
+    -fx-border-color: #5A5A5A;
+}
+
+.button.primary:hover {
+    -fx-background-color: #7A7A7A;
+    -fx-border-color: #6A6A6A;
+}
+
+.button.primary:pressed {
+    -fx-background-color: #5C5C5C;
+    -fx-border-color: #4A4A4A;
+}
+
+/* Disabled button */
+.button:disabled {
+    -fx-background-color: #F0F0F0;
+    -fx-text-fill: #A0A0A0;
+    -fx-border-color: #E0E0E0;
+    -fx-effect: none;
+    -fx-cursor: default;
+}
+
+/* Flat button (без тени) */
+.button.flat {
+    -fx-effect: none;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.button.flat:hover {
+    -fx-background-color: #00000011;
+    -fx-effect: none;
+}
+
+/* CheckBox */
+/* CheckBox Styling - Light Gray Minimalistic */
+.check-box {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+.check-box .box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D0D0D0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-padding: 2px;
+    -fx-shape: none;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #B8B8B8;
+    -fx-background-color: #F8F8F8;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #6B6B6B;
+    -fx-border-color: #5A5A5A;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+    -fx-shape: "M 4 7 L 7 10 L 12 5 L 11 4 L 7 8 L 5 6 Z";
+    -fx-scale-shape: false;
+}
+
+.check-box:focused .box {
+    -fx-border-color: #A0A0A0;
+    -fx-border-width: 1.5px;
+}
+
+.check-box:disabled {
+    -fx-text-fill: #A0A0A0;
+}
+
+.check-box:disabled .box {
+    -fx-background-color: #F0F0F0;
+    -fx-border-color: #E0E0E0;
+}
+
+.check-box:selected:disabled .box {
+    -fx-background-color: #D0D0D0;
+    -fx-border-color: #C0C0C0;
+}
+
+.check-box:selected:disabled .mark {
+    -fx-background-color: #A0A0A0;
+}
+
+/* MenuBar */
+/* MenuBar Styling - Light Gray Minimalistic */
+.menu-bar {
+    -fx-background-color: #F8F8F8;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 4px 8px;
+}
+
+.menu-bar .menu {
+    -fx-background-color: transparent;
+    -fx-padding: 6px 12px;
+}
+
+.menu-bar .menu:hover {
+    -fx-background-color: #E8E8E8;
+    -fx-background-radius: 4px;
+}
+
+.menu-bar .menu:showing {
+    -fx-background-color: #E0E0E0;
+    -fx-background-radius: 4px 4px 0 0;
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+.menu-bar .menu:hover .label {
+    -fx-text-fill: #000000;
+}
+
+/* Context menu (выпадающее меню) */
+.context-menu {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D0D0D0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 4px 0;
+}
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 6px 16px;
+}
+
+.menu-item:hover {
+    -fx-background-color: #F0F0F0;
+}
+
+.menu-item .label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+.menu-item:hover .label {
+    -fx-text-fill: #000000;
+}
+
+.menu-item:disabled .label {
+    -fx-text-fill: #A0A0A0;
+}
+
+/* Separator in menus */
+.context-menu .separator {
+    -fx-padding: 3px 0;
+}
+
+.context-menu .separator .line {
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1px 0;
+}

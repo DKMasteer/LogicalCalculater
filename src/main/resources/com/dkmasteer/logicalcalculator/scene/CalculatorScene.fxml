@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@../style/calc.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dkmasteer.logicalcalculator.controller.CalculatorController">
+   <children>
+      <VBox fx:id="LCElemets_vb" prefHeight="700.0" prefWidth="260.0" spacing="7.0" style="-fx-background-color: #FFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="17.0" prefWidth="255.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="137.0" text="Текущее состояние:">
+                     <font>
+                        <Font name="Helvetica Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="status_lbl" alignment="CENTER" prefHeight="17.0" prefWidth="100.0" text="Не выбрано">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="6.0" prefWidth="260.0">
+               <children>
+                  <Label fx:id="LCArithmeticTitle_lbl" prefHeight="19.0" prefWidth="209.0" text="Арифметические операции">
+                     <font>
+                        <Font name="Helvetica Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="268.0" spacing="5.0">
+               <children>
+                  <Button fx:id="plus_btn" mnemonicParsing="false" onAction="#changeItemTo" text="+" />
+                  <Button fx:id="minus_btn" mnemonicParsing="false" onAction="#changeItemTo" text="-" />
+                  <Button fx:id="mult_btn" mnemonicParsing="false" onAction="#changeItemTo" text="*" />
+                  <Button fx:id="divide_btn" mnemonicParsing="false" onAction="#changeItemTo" text="/" />
+                  <Button fx:id="pow_btn" mnemonicParsing="false" onAction="#changeItemTo" prefHeight="31.0" prefWidth="35.0" text="^" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="268.0" spacing="3.0">
+               <children>
+                  <Button fx:id="sqrt_btn" mnemonicParsing="false" onAction="#changeItemTo" text="√" />
+                  <Button fx:id="cbrt_btn" mnemonicParsing="false" onAction="#changeItemTo" text="∛" />
+                  <Button fx:id="mod_btn" mnemonicParsing="false" onAction="#changeItemTo" prefHeight="35.0" prefWidth="45.0" text="\%" />
+                  <Button fx:id="bigger_btn" mnemonicParsing="false" onAction="#changeItemTo" prefHeight="35.0" prefWidth="45.0" text="&gt;" />
+                  <Button fx:id="smaller_btn" mnemonicParsing="false" onAction="#changeItemTo" prefHeight="35.0" prefWidth="45.0" text="&lt;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="268.0" spacing="3.0">
+               <children>
+                  <Button fx:id="ln_btn" mnemonicParsing="false" onAction="#changeItemTo" text="ln" />
+                  <Button fx:id="log_btn" mnemonicParsing="false" onAction="#changeItemTo" text="log" />
+                  <Button fx:id="abs_btn" mnemonicParsing="false" onAction="#changeItemTo" text="abs" />
+                  <Button fx:id="end_btn" mnemonicParsing="false" onAction="#changeItemTo" text="END" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="6.0" prefWidth="260.0">
+               <children>
+                  <Label fx:id="LCTrigonometryTitle_lbl" prefHeight="19.0" prefWidth="232.0" text="Тригонометрические функции">
+                     <font>
+                        <Font name="Helvetica Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="268.0" spacing="3.0">
+               <children>
+                  <Button fx:id="sin_btn" mnemonicParsing="false" onAction="#changeItemTo" text="sin" />
+                  <Button fx:id="cos_btn" mnemonicParsing="false" onAction="#changeItemTo" text="cos" />
+                  <Button fx:id="tg_btn" mnemonicParsing="false" onAction="#changeItemTo" text="tg" />
+                  <Button fx:id="ctg_btn" mnemonicParsing="false" onAction="#changeItemTo" text="ctg" />
+               </children>
+            </HBox>
+            <CheckBox fx:id="inRadians_cb" mnemonicParsing="false" prefHeight="18.0" prefWidth="258.0" selected="true" text="Считать, что параметры в радианах">
+               <font>
+                  <Font name="Geneva" size="6.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </CheckBox>
+            <Separator prefWidth="200.0" />
+            <Label fx:id="LCInputTitle_lbl" alignment="CENTER" prefHeight="17.0" prefWidth="266.0" text="Переменные">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="268.0">
+               <children>
+                  <Button fx:id="numb_btn" mnemonicParsing="false" onAction="#changeItemTo" prefHeight="31.0" prefWidth="187.0" text="Своя переменная" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="268.0" spacing="3.0">
+               <children>
+                  <Button fx:id="pi_btn" mnemonicParsing="false" onAction="#changeItemTo" text="π" />
+                  <Button fx:id="e_btn" mnemonicParsing="false" onAction="#changeItemTo" text="e" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="260.0">
+               <children>
+                  <Button fx:id="LCCalc_btn" mnemonicParsing="false" onAction="#calculateOnAction" prefHeight="47.0" prefWidth="236.0" text="Расчетать" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="LCAction_ap" layoutX="258.0" layoutY="40.0" prefHeight="660.0" prefWidth="740.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label opacity="0.25" text="\@DKMasteer. 2025" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+   </children>
+</AnchorPane>
